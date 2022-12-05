@@ -46,10 +46,12 @@ const DeleteBook = () => {
                 </div> :
                 <div>
                     <h2>You want to <i>Delete</i> this Book ?</h2>
-                    <Link to={`/bookDetails/${id}`}>
+                   <div className="choice">
+                   <Link to={`/bookDetails/${id}`}>
                         <button>NO</button>
                     </Link>
                     <button onClick={() => deleteBook()}>YES</button>
+                   </div>
                 </div>
             }
         </div>

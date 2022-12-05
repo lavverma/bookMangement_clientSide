@@ -1,0 +1,12 @@
+.createBook {
+    display: flex;
+    justify-content: center;
+    background-image: url('https://thumbs.dreamstime.com/z/vector-illustration-seamless-book-pattern-background-wallpaper-30298316.jpg');
+   height: 100%;
+}
+
+textarea {
+    height: 160px;
+    width: 500px;
+}
+

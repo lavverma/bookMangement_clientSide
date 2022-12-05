@@ -1,0 +1,33 @@
+.bookList {
+    
+    /* flex-direction: column; */
+    /* align-items: center; */
+    background-image: url('https://thumbs.dreamstime.com/z/vector-illustration-seamless-book-pattern-background-wallpaper-30298316.jpg');
+   height: 100%;
+   
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    /* margin: 2rem; */
+}
+
+button {
+    margin: 1rem;
+}
+
+.book{
+    border-radius: 5%;
+    margin: 0 24rem 0 24rem;
+    /* width: 200px; */
+    padding: 2rem;
+    background-color: rgb(14, 219, 255);
+    /* z-index: 2px; */
+}

@@ -1,5 +1,5 @@
-// require('dotenv').config()
 import React from 'react'
+// import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Registration from './components/registration'
 import Login from "./components/login"
@@ -24,7 +24,7 @@ const App = () => {
           <Route path='/bookEdit/:bookId' element={<BookEdit />} />
           <Route path='/deleteBook/:bookId' element={<DeleteBook />} />
           <Route path='/logOut' element={<LogOut />} />
-          <Route path='*' element={<Registration />} />
+          <Route path='*' element={<Login />} />
         </Routes>
       </Router>
 

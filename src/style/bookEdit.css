@@ -1,0 +1,7 @@
+.bookEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://thumbs.dreamstime.com/z/vector-illustration-seamless-book-pattern-background-wallpaper-30298316.jpg');
+    height: 600px;
+}

@@ -1,0 +1,14 @@
+.login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://thumbs.dreamstime.com/z/vector-illustration-seamless-book-pattern-background-wallpaper-30298316.jpg');
+   height: 100vh;
+}
+
+/* .logged {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+} */

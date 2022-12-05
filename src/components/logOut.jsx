@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../style/logOut.css'
 import { Link } from 'react-router-dom'
 
 const LogOut = () => {
@@ -14,12 +15,14 @@ const LogOut = () => {
                     <h1>Successfully Logout</h1>
                     <Link to={'/login'} >Go to Login..</Link>
                 </div> :
-                <div>
+                <div >
                     <h2>You want to Logout ?</h2>
-                    <button onClick={() => logOut()}>Yes</button>
+                   <div className="choice">
+                   <button onClick={() => logOut()}>Yes</button>
                     <Link to={'/bookList'}>
                     <button >No</button>
                     </Link>
+                   </div>
                     
                 </div>
             }

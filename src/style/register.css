@@ -1,0 +1,57 @@
+.register {
+    display: flex;
+    justify-content: center;
+    background-image: url('https://thumbs.dreamstime.com/z/vector-illustration-seamless-book-pattern-background-wallpaper-30298316.jpg');
+   height: 900px;
+}
+
+form{
+    /* border: 2px solid, black; */
+    border-radius: 1%;
+    /* height: 7000px; */
+    width: 35%;
+    padding-left: 2rem;
+    background-color: rgb(14, 219, 255);
+    z-index: 2px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.data {
+    display: flex;
+}
+
+.data h4 {
+    padding-right: 30px;
+    margin-right: 4rem;
+    width: 70px;
+    /* border: 2px solid black; */
+}
+
+.data input {
+    margin: 14px 0 14px 0;
+    border-radius: 8%;
+    width: 180px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: rgb(110, 172, 248);
+    font-weight: bold;
+    width: 150px;
+    /* margin: 2px; */
+  height: 35px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+    background-color: #0b16dd;
+  }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../style/createBook.css"
 import axios from 'axios'
 import jwt from "jwt-decode"
 import { Link } from 'react-router-dom'
@@ -28,7 +29,8 @@ const CreateBook = () => {
         })
     }
 
-    const addBook = async () => {
+    const addBook = async (e) => {
+        e.preventDefault()
         try {
             const res = await axios.post(
                 `${url}/books`,
@@ -48,49 +50,64 @@ const CreateBook = () => {
                 <h1>New Book Added Successfully</h1>
                 <Link to={`/bookList`}>Go To Book List</Link>
             </div>
-                : (<div>
-                    <div>
-                        <h4>Title Of Your Book</h4>
+                : (<div className='createBook'>
+                    <div className='book'>
+                    <h2>Your Book Details</h2>
+                        <div className="data">
+                        <h4>Title</h4>
                         <input
                             type='text'
                             name='title'
                             value={book.title}
                             onChange={(e) => newBook(e)} />
-                        <h4>Excerpt Of Your Book</h4>
-                        <input
+                        </div>
+                        <div className="data">
+                        <h4>Excerpt</h4>
+                        <textarea
                             type='text'
                             name='excerpt'
                             value={book.excerpt}
                             onChange={(e) => newBook(e)} />
-                        <h4>Book ISBN</h4>
+                        </div>
+                        <div className="data">
+                        <h4>ISBN</h4>
                         <input
                             type='text'
                             name='ISBN'
                             value={book.ISBN}
                             onChange={(e) => newBook(e)} />
-                        <h4>Category</h4>
+                        </div>
+                       <div className="data">
+                       <h4>Category</h4>
                         <input
                             type='text'
                             name='category'
                             value={book.category}
                             onChange={(e) => newBook(e)} />
+                       </div>
+                        <div className="data">
                         <h4>Subcategory</h4>
                         <input
                             type='text'
                             name='subcategory'
                             value={book.subcategory}
                             onChange={(e) => newBook(e)} />
-                        <h4>Released Date</h4>
+                        </div>
+                        <div className="data">
+                        <h4>Date</h4>
                         <input
                             type='text'
                             name='releasedAt'
                             value={book.releasedAt}
                             placeholder='YYYY-MM-DD'
                             onChange={(e) => newBook(e)} />
+                        </div>
+                    <div className="button">
+                    <button onClick={(e) => { addBook(e) }}>Add to Book List</button>
                     </div>
-                    <button onClick={() => { addBook() }}>Ad to Book List</button>
+                    </div>
                 </div>
-                )}
+                )} 
         </div>
     )
 }

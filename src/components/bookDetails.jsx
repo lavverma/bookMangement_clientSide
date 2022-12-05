@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '../style/bookDetails.css'
 import {  Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 
@@ -29,31 +30,33 @@ const BookDetails = () => {
 
     
   return (
-    <div>
+    <div className='bookDetails'>
+      <div className="links">
       <Link to={`/bookEdit/${id}`} state ={book} >
       <button>Edit</button>
       </Link>
       <Link to={`/deleteBook/${id}`}>
       <button>Delete</button>
       </Link>
-      <div>
-      <div>
-        <h3>Book Title</h3>
-        <h3>{book.title}</h3>
+      </div>
+      <div className='book'>
+      <div className='data'>
+        <h4>Book Title</h4>
+        <h4>{book.title}</h4>
         </div>
-        <div>
+        <div className='data'>
         <h4>Excerpt</h4>
         <p>{book.excerpt}</p>
         </div>
-        <div>
+        <div className='data'>
         <h4>Category</h4>
         <p>{book.category}</p>
         </div>
-        <div>
+        <div className='data'>
         <h4>Subcategory</h4>
         <p>{book.subcategory}</p>
         </div>
-        <div>
+        <div className='data'>
         <h4>Release Date</h4>
         <p>{book.releasedAt}</p>
         </div>

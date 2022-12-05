@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../style/login.css"
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 
@@ -31,39 +32,43 @@ const Login = () => {
 
         } catch (err) {
             let error = err.response.data.message
-            if(error == "credentials passed does not match"){
-                alert('Your are not Registered yet..Please SignIn')
-                navigate('/register')
-            }
-            else alert(error)
+            alert(error)
         }
     }
 
     return (
-        <div>
-            <h3>Please First Login With Your Account Credentials</h3>
-            <div>
-                <h2>Email</h2>
-                <input
-                    type={"email"}
-                    name='email'
-                    placeholder='abc@gmail.com'
-                    value={details.email}
-                    onChange={(e) => loginCredentials(e)} />
-            </div>
-            <div>
-                <h2>Password</h2>
-                <input
-                    type={"password"}
-                    name='password'
-                    value={details.password}
-                    onChange={(e) => loginCredentials(e)} />
-            </div>
-            <button onClick={(e) => logged(e)}>Login</button>
-            <h4>New User? Please.. 
-                <Link to={'/register'}>Register</Link>
-            </h4>
+        <div className='login'>
+            <form>
+
+                <h3>Please First Login With Your Account Credentials</h3>
+                <div className='data'>
+                    <h4>Email</h4>
+                    <input
+                        type={"email"}
+                        name='email'
+                        placeholder='abc@gmail.com'
+                        value={details.email}
+                        onChange={(e) => loginCredentials(e)} />
+                </div>
+                <div className='data'>
+                    <h4>Password</h4>
+                    <input
+                        type={"password"}
+                        name='password'
+                        value={details.password}
+                        onChange={(e) => loginCredentials(e)} />
+                </div>
+                <div className="button">
+                    <button onClick={(e) => logged(e)}>Login</button>
+                </div>
+                <h4>New User? Please..
+                    <Link to={'/register'}>Register</Link>
+                </h4>
+            </form>
+
         </div>
+        // </div>
+
     )
 }
 
