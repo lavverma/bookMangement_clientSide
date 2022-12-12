@@ -63,8 +63,6 @@ function Registration() {
 
   return (
     <div className="register">
-      <form>
-        <h2>Registration</h2>
         <div className="data">
         <h4>Title</h4>
         <input
@@ -143,7 +141,6 @@ function Registration() {
         <h4>Already Registered ?..
         <Link to={'/login'}>Login</Link>
       </h4>
-      </form>
       
     </div>
   )

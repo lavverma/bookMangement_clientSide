@@ -38,7 +38,6 @@ const Login = () => {
 
     return (
         <div className='login'>
-            <form>
 
                 <h3>Please First Login With Your Account Credentials</h3>
                 <div className='data'>
@@ -62,12 +61,9 @@ const Login = () => {
                     <button onClick={(e) => logged(e)}>Login</button>
                 </div>
                 <h4>New User? Please..
-                    <Link to={'/register'}>Register</Link>
+                    <Link to={'/'}>Register</Link>
                 </h4>
-            </form>
-
         </div>
-        // </div>
 
     )
 }
